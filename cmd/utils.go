@@ -20,9 +20,9 @@ type Wallet struct {
 func CreateNewWallet(RPCEndpoint string) Wallet {
 	// create a new wallet using types.NewAccount()
 	newAccount := types.NewAccount()
-	data := []byte(newAccount.PrivateKey)
+	key_data := []byte(newAccount.PrivateKey)
 
-	err := ioutil.WriteFile("data", data, 0644)
+	err := ioutil.WriteFile("key_data", key_data, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -20,7 +20,7 @@ var createWalletCmd = &cobra.Command{
 		fmt.Println("Creating new wallet.")
 		wallet := CreateNewWallet(rpc.DevnetRPCEndpoint)
 		fmt.Println("Public Key: " + wallet.account.PublicKey.ToBase58())
-		fmt.Println("Private Key Saved in 'data' file")
+		fmt.Println("Private Key Saved in 'key_data' file")
 	},
 }
 
